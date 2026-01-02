@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Promises and Async Await</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        .box {
+            background-color: white;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        }
+
+        button {
+            padding: 8px 15px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .output {
+            margin-top: 10px;
+            font-weight: bold;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Promises and async/await</h2>
+
+    <div class="box">
+        <p>Click buttons to see asynchronous behavior:</p>
+
+        <button onclick="usePromise()">Using Promise</button>
+        <button onclick="useAsyncAwait()">Using async/await</button>
+
+        <div class="output" id="result"></div>
+    </div>
+
+    <script>
+        // Promise example
+        function fetchData() {
+            return new Promise(function(resolve, reject) {
+                setTimeout(function() {
+                    resolve("Data received using Promise");
+                }, 2000);
+            });
+        }
+
+        function usePromise() {
+            document.getElementById("result").innerText = "Loading...";
+            fetchData().then(function(message) {
+                document.getElementById("result").innerText = message;
+            });
+        }
+
+        // async/await example
+        async function useAsyncAwait() {
+            document.getElementById("result").innerText = "Loading...";
+            let message = await fetchData();
+            document.getElementById("result").innerText =
+                message + " with async/await";
+        }
+    </script>
+
+</body>
+</html>

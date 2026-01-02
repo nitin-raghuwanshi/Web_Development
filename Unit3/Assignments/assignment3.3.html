@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Example</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        .box {
+            background-color: white;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        }
+
+        button {
+            padding: 8px 15px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Document Object Model (DOM)</h2>
+
+    <div class="box">
+        <p id="text">This is original text.</p>
+
+        <button onclick="changeText()">Change using innerText</button>
+        <button onclick="changeHTML()">Change using innerHTML</button>
+    </div>
+
+    <script>
+        function changeText() {
+            document.getElementById("text").innerText =
+                "Text changed using innerText";
+        }
+
+        function changeHTML() {
+            document.getElementById("text").innerHTML =
+                "<b>Text changed using innerHTML</b>";
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile Card</title>
+
+    <style>
+        /* Element Selector */
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        /* ID Selector */
+        #title {
+            color: #333;
+            margin-top: 30px;
+        }
+
+        /* Class Selector */
+        .card {
+            width: 300px;
+            background-color: white;
+            padding: 20px;
+            margin: 40px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            position: relative;
+            display: inline-block;
+            transition: transform 0.4s;
+        }
+
+        /* Pseudo-class :hover */
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+
+        .name {
+            color: #0066cc;
+            margin: 10px 0;
+        }
+
+        .role {
+            color: gray;
+        }
+
+        /* Absolute Position */
+        .badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: green;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+        }
+
+        /* Button Styling */
+        .btn {
+            margin-top: 15px;
+            padding: 8px 15px;
+            border: none;
+            background-color: #0066cc;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        /* :hover */
+        .btn:hover {
+            background-color: #004c99;
+        }
+
+        /* :active */
+        .btn:active {
+            transform: scale(0.95);
+        }
+
+        /* :focus */
+        .btn:focus {
+            outline: 2px solid orange;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h2 id="title">Profile Card</h2>
+
+    <div class="card">
+        <div class="badge">ACTIVE</div>
+
+        <img src="profile.jpg" alt="Profile Image" class="profile-img">
+
+        <h3 class="name">Nitin</h3>
+        <p class="role">Web Developer</p>
+
+        <button class="btn">Contact</button>
+    </div>
+
+</body>
+</html>

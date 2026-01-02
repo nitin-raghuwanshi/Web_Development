@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Control Flow Statements</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        .box {
+            background-color: white;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        }
+
+        button {
+            padding: 8px 15px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Control Flow Statements in JavaScript</h2>
+
+    <div class="box">
+        <h3>for Loop</h3>
+        <p id="forOutput"></p>
+        <button onclick="forLoop()">Run for Loop</button>
+    </div>
+
+    <div class="box">
+        <h3>while Loop</h3>
+        <p id="whileOutput"></p>
+        <button onclick="whileLoop()">Run while Loop</button>
+    </div>
+
+    <div class="box">
+        <h3>do-while Loop</h3>
+        <p id="doWhileOutput"></p>
+        <button onclick="doWhileLoop()">Run do-while Loop</button>
+    </div>
+
+    <script>
+        function forLoop() {
+            let result = "";
+            for (let i = 1; i <= 3; i++) {
+                result += i + " ";
+            }
+            document.getElementById("forOutput").innerHTML =
+                "for loop output: " + result;
+        }
+
+        function whileLoop() {
+            let i = 1;
+            let result = "";
+            while (i <= 3) {
+                result += i + " ";
+                i++;
+            }
+            document.getElementById("whileOutput").innerHTML =
+                "while loop output: " + result;
+        }
+
+        function doWhileLoop() {
+            let i = 1;
+            let result = "";
+            do {
+                result += i + " ";
+                i++;
+            } while (i <= 3);
+
+            document.getElementById("doWhileOutput").innerHTML =
+                "do-while loop output: " + result;
+        }
+    </script>
+
+</body>
+</html>

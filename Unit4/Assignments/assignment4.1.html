@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array Methods Demo</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        .box {
+            background-color: white;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        }
+
+        button {
+            padding: 8px 12px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .output {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>JavaScript Array Methods</h2>
+
+    <div class="box">
+        <p>Array: <span id="arrayOutput"></span></p>
+
+        <button onclick="pushItem()">push()</button>
+        <button onclick="popItem()">pop()</button>
+        <button onclick="shiftItem()">shift()</button>
+        <button onclick="unshiftItem()">unshift()</button>
+
+        <div class="output" id="action"></div>
+    </div>
+
+    <script>
+        let fruits = ["Apple", "Banana", "Mango"];
+        document.getElementById("arrayOutput").innerText = fruits;
+
+        function updateArray(action) {
+            document.getElementById("arrayOutput").innerText = fruits;
+            document.getElementById("action").innerText = action;
+        }
+
+        function pushItem() {
+            fruits.push("Orange");
+            updateArray("push(): Added Orange at the end");
+        }
+
+        function popItem() {
+            fruits.pop();
+            updateArray("pop(): Removed last element");
+        }
+
+        function shiftItem() {
+            fruits.shift();
+            updateArray("shift(): Removed first element");
+        }
+
+        function unshiftItem() {
+            fruits.unshift("Grapes");
+            updateArray("unshift(): Added Grapes at the beginning");
+        }
+    </script>
+
+</body>
+</html>
